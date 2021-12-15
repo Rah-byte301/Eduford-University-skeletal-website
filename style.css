@@ -1,0 +1,241 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:'Irish Grover', cursive;
+}
+
+/* header */
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(banner.png);
+    background-position: center;
+    background-size:cover;
+    position:relative;
+}
+nav{
+    display:flex;
+    padding :35px;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width:150px;
+}
+.nav-links{
+    text-align:right;
+}
+.nav-links li{
+    list-style: none;
+    display:inline-block;
+    padding:8px;
+}
+.nav-links li a{
+    text-decoration: none;
+    color:white;
+    font-size:20px;
+   
+}
+.nav-links ul li::after{
+    content:'';
+    width:00%;
+    height:2px;
+    background:red;
+    display:block;
+    margin:auto;
+    transition:0.5s;
+}
+.nav-links ul li:hover::after{
+    width:100%;
+    background-color:red;
+}
+.text-area{
+    text-align: center;
+    position:relative;
+    top:70px;
+    color:white;
+}
+.text-area h1{
+    font-size:62px;
+}
+#desc{
+    font-size:20px;
+}
+.btn{
+    text-decoration: none;
+    padding:5px;
+    border:3px solid navy;
+    border-radius: 10px;
+    position:relative;
+    top:10px;
+    color: white;
+    background:transparent;
+    cursor:pointer;
+}
+.btn:hover{
+    background-color: red;
+    transition:1s;
+}
+@media(max-width:700px){
+    .text-area h1{
+        font-size:20px;
+    }
+    .nav-links ul li{
+        display:block;
+    }
+    .nav-links{
+        position:absolute;
+        text-align:left;
+        background-color: red;
+        top:0;
+        right:0;
+        height:100vh;
+        width:60%;
+        z-index:2;
+    }
+}
+
+/* courses */
+
+.course{
+    margin:auto;
+    padding:20px;
+    text-align: center;
+    background-color: lightcyan;
+}
+.course h1{
+    font-size:62px;
+}
+.course p{
+    font-size:20px;
+}
+.disc{
+    display:flex;
+}
+.courses .row{
+    border:transparent;
+    background-color: lightcoral;
+    margin:5px;
+    border-radius: 10px;
+}
+h2{
+    text-decoration: underline;
+}
+.row:hover{
+    transition-duration: 0.5s;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.9);
+}
+@media(max-width:700px){
+    .disc{
+        flex-direction:column;
+    }
+}
+
+/* Campus */
+
+.campus{
+    width:80%;
+    margin:auto;
+    padding:25px;
+    text-align: center;
+    background-color: lightyellow;
+}
+.row{
+    flex-basis:32%;
+    position:relative;
+    overflow:hidden;
+    border-radius: 10px;
+}
+.row img{
+    width:100%;
+}
+.layer{
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    transition:0.5s;
+    background:transparent;
+    opacity:0;
+}
+.layer:hover{
+    background:rgba(226,0,0,0.7);
+    height:100%;
+    width:100%; 
+    opacity:1;
+    font-size:30px;
+    border-radius: 20px;
+}
+.layer:hover h3{
+    bottom:49%;
+}
+
+/* facilities */
+
+.facilities{
+    width:80%;
+    margin:auto;
+    text-align:center;
+    padding-top:100px;
+}
+.facilities-col{
+    margin:20px;
+}
+.facilities .row{
+    display:flex;
+    background:lightsteelblue;
+}
+.facilities-col img{
+    border-radius:10px;
+}
+.facilities h3{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;;
+}
+
+/* testimonials */
+.testimonials{
+    margin:auto;
+    width:80%;
+    text-align: center;
+    padding-top:100px;
+    background:lightgray;
+    z-index:3;
+}
+.testimonials .row{
+    display:flex;
+}
+.testimonials-col img{
+    height:40px;
+    width:40px;
+    border-radius:50px;
+}
+.testimonials-col{
+    margin:20px;
+    background:lightcoral;
+    border-radius:20px;
+}
+
+/* call to action */
+
+.call{
+    margin:100px auto;
+    text-align: center;
+    width:80%;
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('banner2.jpg');
+    background-size:cover;
+    background-position: center;
+    color:wheat;
+    border-radius: 10px;
+    padding:100px;
+}
+.call a{
+    color:white;
+    border:3px solid red;
+    border-radius: 15px;
+}
+.call a:hover{
+    background-color: red;
+    transition:0.7s;
+}
